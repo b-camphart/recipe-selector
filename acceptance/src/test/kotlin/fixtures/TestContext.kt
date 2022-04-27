@@ -1,6 +1,7 @@
 package fixtures
 
 import MessagePresenter
+import RequestRecipes
 
 class TestContext : MessagePresenter {
 
@@ -10,5 +11,7 @@ class TestContext : MessagePresenter {
     override fun noRecipes() {
         _messages.add("NO RECIPES")
     }
+
+    val requestRecipes = RequestRecipes(this)
 
 }
