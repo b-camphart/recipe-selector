@@ -12,8 +12,9 @@ dependencies {
     testImplementation("org.junit.platform:junit-platform-suite:1.8.2")
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.8.2")
 
-    testImplementation("io.cucumber:cucumber-java:7.2.3")
-    testImplementation("io.cucumber:cucumber-junit-platform-engine:7.2.3")
+    testImplementation("io.cucumber:cucumber-java:7.3.2")
+    testImplementation("io.cucumber:cucumber-junit-platform-engine:7.3.2")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1")
 }
 
 tasks {
