@@ -18,6 +18,7 @@ kotlin {
             dependencies {
                 implementation(kotlin("test-common"))
                 implementation(kotlin("test-annotations-common"))
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.1")
             }
         }
 
@@ -25,8 +26,14 @@ kotlin {
         val jvmTest by getting {
             dependencies {
                 implementation(kotlin("test"))
-                implementation(kotlin("test-junit"))
+                implementation(kotlin("test-junit5"))
+                runtimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.2")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1")
             }
         }
     }
+}
+
+tasks.getByName<Test>("jvmTest") {
+    useJUnitPlatform()
 }
